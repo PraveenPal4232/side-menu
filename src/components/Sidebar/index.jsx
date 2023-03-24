@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { menuData } from "../../constants";
 
 function Sidebar() {
-  const [mainMenu, setMainMenu] = useState(menuData);
 
   return (
     <div className="sidebar">
@@ -10,7 +9,7 @@ function Sidebar() {
         <div className="brand_logo">Logo</div>
         <nav className="navbar p-0">
           <div className="menu accordion w-100">
-            {mainMenu.map((menu) => (
+            {menuData.map((menu) => (
               <div className="accordion-item rounded-0" key={menu.key}>
                 <h2 className="accordion-header" id="menu">
                   <button
